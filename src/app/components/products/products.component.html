@@ -1,0 +1,40 @@
+<div class="form-group">
+    <label for="searchProduct">Search Product</label>
+    <input type="text" class="form-control"
+    (keyup)="onProductSearch($event)">
+</div>
+
+<div class="form-group">
+    <label for="searchProduct">Two way binding Search Product</label>
+    <input type="text" class="form-control"
+    [(ngModel)]="searchedProduct">
+</div>
+
+
+<p class="alert alert-info">
+    {{searchedProduct}}
+</p>
+
+<button class="btn btn-primary" 
+[disabled]="isDisabled" (click)="updateCartStatus()">
+Add Product
+</button>
+
+<button class="btn btn-danger ml-3" 
+[disabled]="noOfProductsAdded === 0" (click)=" removeCartItems()">
+Remove Product
+</button>
+
+
+<p class="alert alert-info mt-4">
+    {{cartProductStatus}}
+</p>
+
+<app-product></app-product>
+<!-- <div app-product>
+
+</div> -->
+
+<!-- <div class="app-product">
+    
+</div> -->

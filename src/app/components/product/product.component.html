@@ -1,0 +1,22 @@
+ <p>
+    This is product 
+    <strong>
+        {{productName}}
+    </strong> 
+    with id 
+    <strong>
+        {{productId}}
+    </strong>
+    and the status is {{productStatus}}
+</p> 
+
+<p>
+    {{res}}
+</p>
+
+<p [innerHTML]="res">
+
+</p>
+
+<input type="text" class="form-control" 
+[value]="productName">
